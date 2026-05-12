@@ -120,6 +120,12 @@ router.beforeEach((to, from, next) => {
         next()
       }
     }
+    else {
+      // userType 异常，清除缓存并跳转登录页
+      localStorage.removeItem('token')
+      localStorage.removeItem('userInfo')
+      next('/auth/login')
+    }
   } else {
     if (to.path.startsWith('/back')) {
       // 如果是访问后台页面，那么跳转到登录页

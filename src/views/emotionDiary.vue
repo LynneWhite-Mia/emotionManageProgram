@@ -22,15 +22,12 @@
             <!-- 主要情绪 -->
             <div class="diary-card">
                 <div class="title">主要情绪</div>
-                <div class="diary-card">
-                    <div class="title">主要情绪</div>
-                    <div class="emotion-grid">
-                        <div v-for="emotion in emotionOptions" :key="emotion.name" class="emotion-card"
-                            :class="{ selected: emotion.name === diaryForm.dominantEmotion }"
-                            @click="selectEmotion(emotion.name)">
-                            <el-image :src="emotion.url" style="width: 50px;height: 50px"></el-image>
-                            <div class="emotion-name">{{ emotion.name }}</div>
-                        </div>
+                <div class="emotion-grid">
+                    <div v-for="emotion in emotionOptions" :key="emotion.name" class="emotion-card"
+                        :class="{ selected: emotion.name === diaryForm.dominantEmotion }"
+                        @click="selectEmotion(emotion.name)">
+                        <el-image :src="emotion.url" style="width: 50px;height: 50px"></el-image>
+                        <div class="emotion-name">{{ emotion.name }}</div>
                     </div>
                 </div>
             </div>

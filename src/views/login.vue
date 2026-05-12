@@ -1,10 +1,10 @@
 <template>
     <div class="container">
       <div class="title">
-        <div class="back-home">
+        <router-link to="/" class="back-home">
           <el-icon><Back /></el-icon>
           <span>返回首页</span>
-        </div>
+        </router-link>
         <div class="title-text">
           <h2>登录您的账户</h2>
           <p>请输入您的登录信息</p>
@@ -84,6 +84,17 @@ const submitForm = async (formEl) => {
   .title {
     .back-home {
       margin-bottom: 60px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #6b7280;
+      font-size: 14px;
+      text-decoration: none;
+      cursor: pointer;
+      width: fit-content;
+      &:hover {
+        color: #4a9c8c;
+      }
     }
     .title-text {
       text-align: center;

@@ -170,7 +170,7 @@ const beforeUpload = (file) => {
 const businessId = ref(null)
 const handleloadRequest = async ({file}) => {
 //UUID生成
-  businessId,value =crypto.randomUUID()
+  businessId.value =crypto.randomUUID()
   const fileRes = await uploadFile(file,{businessId:businessId.value})
   console.log(fileRes)
   

@@ -559,7 +559,12 @@ onMounted(() => {
         color: #2c3e50;
         margin-bottom: 4px
       }
-
+      .number {
+        font-size: 24px;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 4px
+      }
       .subtitle-title {
         font-size: 12px;
         color: #95a5a6;
